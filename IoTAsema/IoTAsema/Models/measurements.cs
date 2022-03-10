@@ -18,7 +18,9 @@ namespace IoTAsema.Models
         public Nullable<int> DeviceID { get; set; }
         public Nullable<System.DateTime> Time { get; set; }
         public Nullable<int> Type { get; set; }
-        public Nullable<double> Value { get; set; }
+        public Nullable<double> Celsius { get; set; }
+        public Nullable<double> Fahrenheit { get; set; }
+        public Nullable<double> Humidity { get; set; }
     
         public virtual devices devices { get; set; }
     }

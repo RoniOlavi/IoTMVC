@@ -1,0 +1,37 @@
+﻿@model IoTAsema.Models.measurements
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>measurements</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Time)</dt>
+        <dd>@Html.DisplayFor(model => model.Time)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Type)</dt>
+        <dd>@Html.DisplayFor(model => model.Type)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Celsius)</dt>
+        <dd>@Html.DisplayFor(model => model.Celsius)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Fahrenheit)</dt>
+        <dd>@Html.DisplayFor(model => model.Fahrenheit)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Humidity)</dt>
+        <dd>@Html.DisplayFor(model => model.Humidity)</dd>
+        <dt>@Html.DisplayNameFor(model => model.devices.Device)</dt>
+        <dd>@Html.DisplayFor(model => model.devices.Device)</dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

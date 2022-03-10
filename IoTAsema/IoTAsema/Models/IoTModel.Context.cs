@@ -28,7 +28,7 @@ namespace IoTAsema.Models
         public virtual DbSet<commands> commands { get; set; }
         public virtual DbSet<devices> devices { get; set; }
         public virtual DbSet<Login> Login { get; set; }
-        public virtual DbSet<measurements> measurements { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<measurements> measurements { get; set; }
     }
 }

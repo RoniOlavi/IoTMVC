@@ -1,0 +1,39 @@
+﻿@model IEnumerable<IoTAsema.Models.measurements>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Tiedot</h2>
+
+<p>
+    @Html.ActionLink("Lisää uusi", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Aika</th>
+        <th>Paikka
+        <br>Koti=1</th>
+        <th>Lämpötila C</th>
+        <th>Lämpötila F</th>
+        <th>Kosteus %</th>
+        <th>Laite</th>
+    </tr>
+
+@foreach (IoTAsema.Models.measurements mitt in Model) {
+<tr>
+    <td>@Html.DisplayFor(modelItem => mitt.Time)</td>
+    <td>@Html.DisplayFor(modelItem => mitt.Type)</td>
+    <td>@Html.DisplayFor(modelItem => mitt.Celsius)</td>
+    <td>@Html.DisplayFor(modelItem => mitt.Fahrenheit)</td>
+    <td>@Html.DisplayFor(modelItem => mitt.Humidity)</td>
+    <td>@Html.DisplayFor(modelItem => mitt.devices.Device)</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = mitt.MeasurementID }) |
+        @Html.ActionLink("Details", "Details", new { id = mitt.MeasurementID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = mitt.MeasurementID })
+    </td>
+</tr>
+}
+
+</table>

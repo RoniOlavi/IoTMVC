@@ -1,0 +1,31 @@
+﻿@model IoTAsema.Models.measurements
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>measurements</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Time)</dt>
+        <dd>@Html.DisplayFor(model => model.Time)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Type)</dt>
+        <dd>@Html.DisplayFor(model => model.Type)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Celsius)</dt>
+        <dd>@Html.DisplayFor(model => model.Celsius)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Fahrenheit)</dt>
+        <dd>@Html.DisplayFor(model => model.Fahrenheit)</dd>
+        <dt>@Html.DisplayNameFor(model => model.Humidity)</dt>
+        <dd>@Html.DisplayFor(model => model.Humidity)</dd>
+        <dt>@Html.DisplayNameFor(model => model.devices.Device)</dt>
+        <dd>@Html.DisplayFor(model => model.devices.Device)</dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MeasurementID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

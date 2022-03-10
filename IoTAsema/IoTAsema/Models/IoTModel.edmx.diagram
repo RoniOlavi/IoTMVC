@@ -8,10 +8,10 @@
         <EntityTypeShape EntityType="IoTDBModel.commands" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
         <EntityTypeShape EntityType="IoTDBModel.devices" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="IoTDBModel.Login" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="IoTDBModel.measurements" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="IoTDBModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="IoTDBModel.FK_commands_devices" ManuallyRouted="false" />
-        <AssociationConnector Association="IoTDBModel.FK_measurements_devices" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="IoTDBModel.measurements" Width="1.5" PointX="3" PointY="4.25" />
+        <AssociationConnector Association="IoTDBModel.FK_measurements_devices" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
